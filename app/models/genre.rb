@@ -7,7 +7,7 @@ class Genre < ActiveRecord::Base
   end
 
   def artist_count
-    self.artists.size
+    self.artists.uniq.size
   end
 
   def all_artist_names

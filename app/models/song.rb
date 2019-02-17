@@ -9,6 +9,7 @@ class Song < ActiveRecord::Base
 
   def drake_made_this
     binding.pry
+    drake ||= Artist.new(name: "Drake")
     self.artist = Artist.all.where("name = 'Drake'")
   end
 end
